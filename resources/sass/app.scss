@@ -1,0 +1,254 @@
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+
+$card-shadow: 0px 4px 12px 0px rgba(0,0,0,0.02);
+// $primary: #bd3737;
+$primary: #3273dc;
+
+$link: $primary;
+
+$navbar-item-hover-color: #0a0a0a;
+$navbar-item-color: #757575;
+
+$footer-background-color: white;
+
+$pagination-focus-border-color: hsl(0, 0%, 71%);
+$pagination-current-background-color: $primary;
+$pagination-current-border-color: $primary;
+
+$label-weight: 300;
+
+$text: #6b6b6b;
+
+$menu-item-hover-background-color: lighten($primary, 43);
+$menu-item-color: $text;
+
+$vote: #bd3737;
+
+$bg-color: #f6f9fc;
+
+@import "~bulma";
+
+body {
+    background-color: $bg-color;
+}
+
+.navbar {
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+.navbar-brand .navbar-item {
+    font-size: 1.25rem;
+    color: #424242;
+}
+
+.navbar-item {
+    font-size: 15px;
+}
+
+a.navbar-item.is-active {
+    color: $primary;
+    background-color: #fafafa !important;
+}
+
+nav.pagination {
+    margin-top: 5rem;
+}
+
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.card-padding {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+
+.customized-navigation {
+    border-top: 4px solid $primary;
+    border-bottom: 1px solid #e8e8e8;
+    min-height: 4.25rem!important;
+}
+
+.navbar-item-custom, .card-meta, .card-meta-light {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .05em;
+}
+
+.hero {
+    background-image: radial-gradient(circle at top left, #1644ad, #328bf2);
+}
+
+.card-meta {
+    color: $primary;
+}
+
+.card-meta-light {
+    color: lighten($text, 20);
+    font-weight: 400;
+}
+
+.card-meta-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-left: 1px solid #EDEFF1;
+
+    @media (max-width: $tablet) {
+        margin-right: .75rem;
+        margin-left: .75rem;
+        border-left: none;
+    }
+}
+
+.card-title {
+    margin-top: 1rem;
+}
+
+.card {
+    padding: 2rem;
+
+    &:not(:first-child) {
+        margin-top: 1.5rem;
+    }
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-list {
+    line-height: 2rem;
+}
+
+.menu-list li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    &::before {
+        display: inline-block;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: $primary;
+        border-radius: 3px;
+        margin-right: 1rem;
+    }
+}
+
+.column-post-image {
+    padding-right: 0;
+    height: max-content;
+}
+
+.meta-padding-top {
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.meta-padding-bottom {
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2.75rem;
+    padding-top: 1rem;
+}
+
+.post-title {
+    font-size: 18px;
+}
+
+.post-image {
+    width: 100%;
+    max-height: 512px;
+    object-fit: contain;
+    object-position: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    background-color: lighten($primary, 43);
+}
+
+.avatar {
+    position: relative;
+    line-height: 40px;
+    text-align: center;
+    background-color: lighten($primary, 5);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    float: left;
+    border-radius: 3px;
+}
+
+.avatar-meta-right {
+    padding-left: 0.25rem;
+}
+
+.voted {
+    color: $vote;
+}
+
+.truncate-content, .truncate-menu {
+    max-width: 75ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.truncate-menu {
+    max-width: 45ch;
+}
+
+.upvote, .downvote {
+    font-size: 20px;
+}
+
+.is-article-tag {
+    background-color: #fff !important;
+}
+
+#return-top {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background: $primary;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+
+    &:hover {
+        background: lighten($primary, 5);
+    }
+}
+
+.fa-level-up-alt {
+    color: white !important;
+}
+
+input#search {
+    font-size: 14px;
+    background-color: $bg-color;
+    color: $primary;
+    border: none;
+
+    &::placeholder {
+        color: darken($bg-color, 23);
+    }
+}
